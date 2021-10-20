@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <div class="container">
+    <div class="form-section">
+      <h2>
+        Employees
+      </h2>
+      {% for message in app.flashes('info') %}
+        <div>
+          {{ message }}
+        </div>
+      {% endfor %}
+
+      {{ form_start(form) }}
+
+      {{ form_errors(form) }}
+
+      {{ form_widget(form) }}
+      {{ form_end(form) }}
+    </div>
+    <div class="table-section">
+      {# table to show all employees #}
+      {% if employees %}
+        <table>
+          <thead>
+            <tr>
+              <th>
+                First Name
+              </th>
+              <th>
+                Last Name
+              </th>
+              <th>
+                Date of Birth
+              </th>
+              <th>
+                Email
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for employee in employees %}
+              <tr>
+                <td>
+                  {{ employee.firstName }}
+                </td>
+                <td>
+                  {{ employee.lastName }}
+                </td>
+                <td>
+                  {{ employee.dateOfBirth|date('d/m/y') }}
+                </td>
+                <td>
+                  {{ employee.email }}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <p>
+          No employees to display
+        </p>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
