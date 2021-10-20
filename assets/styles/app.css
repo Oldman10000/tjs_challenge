@@ -16,7 +16,7 @@
     flex-direction: column;
     align-items: center;
     color: darkblue;
-    width: 60vw;
+    width: 750px;
     margin: 0 auto;
 }
 
@@ -40,6 +40,11 @@
     text-align: right;
 }
 
+.required::before {
+    content: " *";
+    color: red;
+}
+
 #employee_form input, button {
     display: table-cell;
     padding: 5px 10px;
@@ -50,15 +55,15 @@
 
 #employee_form_save {
     margin-top: 20px;
-    background: orange;
-    border-color: orange;
+    background: darkorange;
+    border-color: darkorange;
     text-transform: uppercase;
     color: white;
     cursor: pointer;
 }
 
 .table-section {
-    width: 80vw;
+    width: 1000px;
     margin: 0 auto;
 }
 
