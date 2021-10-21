@@ -2,6 +2,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    margin: 0;
+}
+
 .container {
     height: 100vh;
     display: flex;
@@ -10,29 +14,27 @@
 }
 
 .form-section {
-    background: lightblue;
-    padding: 10px 25px;
+    background: #DEF2F9;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: darkblue;
-    width: 750px;
+    justify-content: center;
+    color: #124F7B;
+    width: 100vw;
+    min-height: 40vh;
     margin: 0 auto;
+    font-size: 0.8em;
+    overflow-x: auto;
+    font-weight: bold;
 }
 
 #employee_form {
     display: table;
-    padding: 20px;
     border-spacing: 10px;
 }
 
 #employee_form div {
     display: table-row;
-}
-
-#employee_form div input::after {
-    content: "*";
-    color: red;
 }
 
 #employee_form label {
@@ -45,7 +47,7 @@
     color: red;
 }
 
-#employee_form input, button {
+#employee_form input {
     display: table-cell;
     padding: 5px 10px;
     border-color: blue;
@@ -54,17 +56,54 @@
 }
 
 #employee_form_save {
+    padding: 7.5px 15px;
     margin-top: 20px;
-    background: darkorange;
-    border-color: darkorange;
+    background: #F15A25;
+    border-color: #F15A25;
+    border-radius: 2.5px;
     text-transform: uppercase;
     color: white;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .table-section {
-    width: 1000px;
+    width: 100vw;
+    min-height: 40vh;
     margin: 0 auto;
+    font-size: 1.2em;
+    overflow-x: auto;
+    font-size: 0.8em;
+}
+
+@media (min-width: 600px) {
+    .table-section, .form-section {
+        width: 80vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .table-section, .form-section {
+        width: 70vw;
+    }
+}
+
+@media (min-width: 992px) {
+    .table-section {
+        width: 60vw;
+    }
+    .form-section {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .table-section {
+        width: 50vw;
+    }
+    .form-section {
+        width: 40vw;
+    }
 }
 
 .table-section table {
@@ -73,17 +112,18 @@
 }
 
 .table-section th {
-    background-color: darkblue;
-    color: lightblue;
-    padding: 5px;
+    background-color: #124F7B;
+    color: #DEF2F9;
+    padding: 5px 7.5px;
     text-align: left;
 }
 
 .table-section td {
-    padding: 5px;
+    padding: 5px 7.5px;
+    color: #124F7B;
+    font-weight: bold;
 }
 
 .table-section tr:nth-child(odd) {
-    background-color: lightblue;
-    color: darkblue;
+    background-color: #DEF2F9;
 }
