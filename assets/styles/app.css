@@ -30,25 +30,21 @@ body {
 
 #employee_form {
     display: table;
-    border-spacing: 10px;
-}
-
-#employee_form div {
-    display: table-row;
+    border-spacing: 0 10px;
 }
 
 #employee_form label {
-    display: table-cell;
+    display: table-row;
     text-align: right;
 }
 
 .required::before {
-    content: " *";
+    content: "* ";
     color: red;
 }
 
 #employee_form input {
-    display: table-cell;
+    display: table-row;
     padding: 5px 10px;
     border-color: blue;
     border-radius: 2px;
@@ -85,6 +81,18 @@ body {
 @media (min-width: 768px) {
     .table-section, .form-section {
         width: 70vw;
+    }
+    #employee_form {
+        border-spacing: 10px;
+    }
+    #employee_form div {
+        display: table-row;
+    }
+    #employee_form label {
+        display: table-cell;
+    }
+    #employee_form input {
+        display: table-cell;
     }
 }
 
